@@ -1,0 +1,41 @@
+﻿Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+
+Imports WinCrud2.Test.Data
+Public Class FrmReportViewer
+    Dim _ds As DataSet
+
+    Public Sub New(Optional ByVal data As DataSet = Val.Nullable)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+    Private Sub FrmReportViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim Server As New ConnectionInfo
+        Me.Cursor = Cursors.WaitCursor
+
+        Dim DBX As Object = New DBConnection().ConnectionSetting()
+        With Server
+            .ServerName = "Localhost"
+            .DatabaseName = "PP"
+            .UserID = "Root"
+            .Password = "lagis3nt0s4"
+        End With
+
+        Dim ReportObject As New ReportDocument
+
+        ReportObject.Load("RptDoPrint.rpt")
+        ReportObject.SetDataSource(_ds.Tables(0))
+
+        ' Param
+        ReportObject.ParameterFields("NamaSales").CurrentValues.AddValue("")
+        ReportObject.ParameterFields("KodeSales").CurrentValues.AddValue("")
+        ReportObject.ParameterFields("NoSO").CurrentValues.AddValue("")
+        ReportObject.ParameterFields("TglSO").CurrentValues.AddValue("")
+        ReportObject.ParameterFields("NamaCustomer").CurrentValues.AddValue("")
+        ReportObject.ParameterFields("Alamat").CurrentValues.AddValue("")
+    End Sub
+End Class

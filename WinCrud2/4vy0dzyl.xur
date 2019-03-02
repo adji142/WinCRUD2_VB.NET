@@ -187,7 +187,7 @@ Public Class frmDOBrowse
     End Sub
 
     Private Sub CmdPrint_Click(sender As Object, e As EventArgs) Handles CmdPrint.Click
-        Dim ds As New System.Data.DataTable
+        Dim ds As New DataSet
 
         Dim NoDO As String = ViewH.Rows(ViewH.CurrentRow.Index).Cells("NoSO").Value.ToString()
         Dim TglSO As String = ViewH.Rows(ViewH.CurrentRow.Index).Cells("TglSO").Value.ToString()
@@ -197,7 +197,7 @@ Public Class frmDOBrowse
         Dim Alamat As String = ViewH.Rows(ViewH.CurrentRow.Index).Cells("AlamatKirim").Value.ToString()
 
         Dim Sql As String
-        Sql = "select sod.KodeBarang as KodeItem,i.NamaItem,sod.QtyOrder As Qty,sod.HrgSatuan As Hrg " +
+        Sql = "select ,sod.KodeBarang,i.NamaItem,sod.QtyOrder As Qty,sod.HrgSatuan As Hrg " +
             " From salesorderdetail sod" +
             " inner join titem i on i.KodeItem = sod.KodeBarang " +
             " where sod.HeaderID = '" + _RowIDH + "'"
@@ -209,9 +209,9 @@ Public Class frmDOBrowse
             DA.SelectCommand = CMD
             DA.Fill(ds)
 
-            Dim PrvCetak As New FrmReportViewer(ds, NoDO, TglSO, NamaSales, KodeSales, NamaCustomer, Alamat)
-            'Dim PrvCetak As FrmReportViewer(ds)
-            PrvCetak.ShowDialog()
+            Dim Dsv2 As DataSet = ds.Copy
+            'Dim PrvCetak As FrmReportViewer(Dsv2,NoDO,TglSO,NamaSales,KodeSales,NamaCustomer,Alamat)
+            Dim PrvCetak As FrmReportViewer(ds)
         End Using
     End Sub
 End Class

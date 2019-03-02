@@ -22,10 +22,10 @@ Partial Class frmDOBrowse
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -40,17 +40,17 @@ Partial Class frmDOBrowse
         Me.NamaSales = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nPrint = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ViewD = New Enerzie.EPSGridControls.EPSDataGridView()
-        Me.CmdAdd = New System.Windows.Forms.Button()
-        Me.CmdEdit = New System.Windows.Forms.Button()
-        Me.CmdDel = New System.Windows.Forms.Button()
-        Me.CmdPrint = New System.Windows.Forms.Button()
-        Me.CmdSearch = New System.Windows.Forms.Button()
         Me.RowIDD = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NamaItem = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QtyOrder = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QtyDO = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HrgSatuan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.KodeBarang = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CmdAdd = New System.Windows.Forms.Button()
+        Me.CmdEdit = New System.Windows.Forms.Button()
+        Me.CmdDel = New System.Windows.Forms.Button()
+        Me.CmdPrint = New System.Windows.Forms.Button()
+        Me.CmdSearch = New System.Windows.Forms.Button()
         CType(Me.ViewH, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ViewD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -93,8 +93,8 @@ Partial Class frmDOBrowse
         Me.ViewH.AllowUserToDeleteRows = False
         Me.ViewH.AllowUserToOrderColumns = True
         Me.ViewH.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-        Me.ViewH.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.ViewH.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.ViewH.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -105,14 +105,14 @@ Partial Class frmDOBrowse
         Me.ViewH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.ViewH.ColumnHeadersHeight = 35
         Me.ViewH.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RowID, Me.NoSO, Me.TglSO, Me.NamaCust, Me.AlamatKirim, Me.KodeSales, Me.NamaSales, Me.nPrint})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ViewH.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ViewH.DefaultCellStyle = DataGridViewCellStyle2
         Me.ViewH.Location = New System.Drawing.Point(12, 35)
         Me.ViewH.MultiSelect = False
         Me.ViewH.Name = "ViewH"
@@ -189,8 +189,8 @@ Partial Class frmDOBrowse
         Me.ViewD.AllowUserToDeleteRows = False
         Me.ViewD.AllowUserToOrderColumns = True
         Me.ViewD.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.ViewD.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        Me.ViewD.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.ViewD.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -201,14 +201,14 @@ Partial Class frmDOBrowse
         Me.ViewD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.ViewD.ColumnHeadersHeight = 35
         Me.ViewD.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RowIDD, Me.NamaItem, Me.QtyOrder, Me.QtyDO, Me.HrgSatuan, Me.KodeBarang})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ViewD.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ViewD.DefaultCellStyle = DataGridViewCellStyle4
         Me.ViewD.Location = New System.Drawing.Point(12, 165)
         Me.ViewD.MultiSelect = False
         Me.ViewD.Name = "ViewD"
@@ -221,6 +221,51 @@ Partial Class frmDOBrowse
         Me.ViewD.Size = New System.Drawing.Size(651, 124)
         Me.ViewD.StandardTab = True
         Me.ViewD.TabIndex = 5
+        '
+        'RowIDD
+        '
+        Me.RowIDD.DataPropertyName = "RowIDD"
+        Me.RowIDD.HeaderText = "RowID"
+        Me.RowIDD.Name = "RowIDD"
+        Me.RowIDD.ReadOnly = True
+        Me.RowIDD.Visible = False
+        '
+        'NamaItem
+        '
+        Me.NamaItem.DataPropertyName = "NamaItem"
+        Me.NamaItem.HeaderText = "Nama Item"
+        Me.NamaItem.Name = "NamaItem"
+        Me.NamaItem.ReadOnly = True
+        '
+        'QtyOrder
+        '
+        Me.QtyOrder.DataPropertyName = "QtyOrder"
+        Me.QtyOrder.HeaderText = "Qty Order"
+        Me.QtyOrder.Name = "QtyOrder"
+        Me.QtyOrder.ReadOnly = True
+        '
+        'QtyDO
+        '
+        Me.QtyDO.DataPropertyName = "QtyDO"
+        Me.QtyDO.HeaderText = "Qty DO"
+        Me.QtyDO.Name = "QtyDO"
+        Me.QtyDO.ReadOnly = True
+        Me.QtyDO.Visible = False
+        '
+        'HrgSatuan
+        '
+        Me.HrgSatuan.DataPropertyName = "HrgSatuan"
+        Me.HrgSatuan.HeaderText = "Hrg Satuan"
+        Me.HrgSatuan.Name = "HrgSatuan"
+        Me.HrgSatuan.ReadOnly = True
+        '
+        'KodeBarang
+        '
+        Me.KodeBarang.DataPropertyName = "KodeBarang"
+        Me.KodeBarang.HeaderText = "Kode Barang"
+        Me.KodeBarang.Name = "KodeBarang"
+        Me.KodeBarang.ReadOnly = True
+        Me.KodeBarang.Visible = False
         '
         'CmdAdd
         '
@@ -270,51 +315,6 @@ Partial Class frmDOBrowse
         Me.CmdSearch.TabIndex = 10
         Me.CmdSearch.Text = "Search"
         Me.CmdSearch.UseVisualStyleBackColor = True
-        '
-        'RowIDD
-        '
-        Me.RowIDD.DataPropertyName = "RowIDD"
-        Me.RowIDD.HeaderText = "RowID"
-        Me.RowIDD.Name = "RowIDD"
-        Me.RowIDD.ReadOnly = True
-        Me.RowIDD.Visible = False
-        '
-        'NamaItem
-        '
-        Me.NamaItem.DataPropertyName = "NamaItem"
-        Me.NamaItem.HeaderText = "Nama Item"
-        Me.NamaItem.Name = "NamaItem"
-        Me.NamaItem.ReadOnly = True
-        '
-        'QtyOrder
-        '
-        Me.QtyOrder.DataPropertyName = "QtyOrder"
-        Me.QtyOrder.HeaderText = "Qty Order"
-        Me.QtyOrder.Name = "QtyOrder"
-        Me.QtyOrder.ReadOnly = True
-        '
-        'QtyDO
-        '
-        Me.QtyDO.DataPropertyName = "QtyDO"
-        Me.QtyDO.HeaderText = "Qty DO"
-        Me.QtyDO.Name = "QtyDO"
-        Me.QtyDO.ReadOnly = True
-        Me.QtyDO.Visible = False
-        '
-        'HrgSatuan
-        '
-        Me.HrgSatuan.DataPropertyName = "HrgSatuan"
-        Me.HrgSatuan.HeaderText = "Hrg Satuan"
-        Me.HrgSatuan.Name = "HrgSatuan"
-        Me.HrgSatuan.ReadOnly = True
-        '
-        'KodeBarang
-        '
-        Me.KodeBarang.DataPropertyName = "KodeBarang"
-        Me.KodeBarang.HeaderText = "Kode Barang"
-        Me.KodeBarang.Name = "KodeBarang"
-        Me.KodeBarang.ReadOnly = True
-        Me.KodeBarang.Visible = False
         '
         'frmDOBrowse
         '
