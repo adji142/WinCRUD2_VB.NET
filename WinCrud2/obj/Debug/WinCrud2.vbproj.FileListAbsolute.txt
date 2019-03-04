@@ -16,3 +16,4 @@ E:\Kantor\HSP\Test PRJ\WinCrud2\WinCrud2\obj\Debug\WinCrud2.vbproj.GenerateResou
 E:\Kantor\HSP\Test PRJ\WinCrud2\WinCrud2\obj\Debug\WinCrud2.exe
 E:\Kantor\HSP\Test PRJ\WinCrud2\WinCrud2\obj\Debug\WinCrud2.xml
 E:\Kantor\HSP\Test PRJ\WinCrud2\WinCrud2\obj\Debug\WinCrud2.pdb
+E:\Kantor\HSP\Test PRJ\WinCrud2\WinCrud2\obj\Debug\WinCrud2.vbprojResolveAssemblyReference.cache

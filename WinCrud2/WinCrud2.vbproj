@@ -114,10 +114,16 @@
     <Compile Include="Controls\FrmLookupStock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DsTestOne.Designer.vb">
+    <Compile Include="CrystalReport1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DsTestOne.xsd</DependentUpon>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsRptData.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRptData.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmDOBrowse.Designer.vb">
       <DependentUpon>frmDOBrowse.vb</DependentUpon>
@@ -189,6 +195,10 @@
     <EmbeddedResource Include="Controls\FrmLookupStock.resx">
       <DependentUpon>FrmLookupStock.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDOBrowse.resx">
       <DependentUpon>frmDOBrowse.vb</DependentUpon>
     </EmbeddedResource>
@@ -219,16 +229,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DsTestOne.xsc">
-      <DependentUpon>DsTestOne.xsd</DependentUpon>
+    <None Include="dsRptData.xsc">
+      <DependentUpon>dsRptData.xsd</DependentUpon>
     </None>
-    <None Include="DsTestOne.xsd">
+    <None Include="dsRptData.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsTestOne.Designer.vb</LastGenOutput>
+      <LastGenOutput>dsRptData.Designer.vb</LastGenOutput>
     </None>
-    <None Include="DsTestOne.xss">
-      <DependentUpon>DsTestOne.xsd</DependentUpon>
+    <None Include="dsRptData.xss">
+      <DependentUpon>dsRptData.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

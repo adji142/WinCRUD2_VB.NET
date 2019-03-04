@@ -209,9 +209,12 @@ Public Class frmDOBrowse
             DA.SelectCommand = CMD
             DA.Fill(ds)
 
-            Dim PrvCetak As New FrmReportViewer(ds, NoDO, TglSO, NamaSales, KodeSales, NamaCustomer, Alamat)
+            Dim PrvCetak As New FrmReportViewer(_RowIDH, NoDO, TglSO, NamaSales, KodeSales, NamaCustomer, Alamat)
+            'IsMdiContainer = True
+            PrvCetak.MdiParent = frmMain
             'Dim PrvCetak As FrmReportViewer(ds)
-            PrvCetak.ShowDialog()
+            PrvCetak.Show()
+
         End Using
     End Sub
 End Class

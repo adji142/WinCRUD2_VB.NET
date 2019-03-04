@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class RptDoPrint
+Public Class CrystalReport1
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class RptDoPrint
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "RptDoPrint.rpt"
+            Return "CrystalReport1.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class RptDoPrint
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "WinCrud2.RptDoPrint.rpt"
+            Return "WinCrud2.CrystalReport1.rpt"
         End Get
         Set
             'Do nothing
@@ -91,66 +91,10 @@ Public Class RptDoPrint
             Return Me.ReportDefinition.Sections(4)
         End Get
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_NamaSales() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(0)
-        End Get
-    End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_KodeSales() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(1)
-        End Get
-    End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_NoSO() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(2)
-        End Get
-    End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_TglSO() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(3)
-        End Get
-    End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_NamaCustomer() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(4)
-        End Get
-    End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_Alamat() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(5)
-        End Get
-    End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_RowID() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(6)
-        End Get
-    End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedRptDoPrint
+Public Class CachedCrystalReport1
     Inherits Component
     Implements ICachedReport
     
@@ -192,7 +136,7 @@ Public Class CachedRptDoPrint
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As RptDoPrint = New RptDoPrint()
+        Dim rpt As CrystalReport1 = New CrystalReport1()
         rpt.Site = Me.Site
         Return rpt
     End Function

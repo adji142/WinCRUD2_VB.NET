@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("DsTestOne"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("dsRptData"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class DsTestOne
+Partial Public Class dsRptData
     Inherits Global.System.Data.DataSet
     
     Private tableData1 As Data1DataTable
@@ -128,7 +128,7 @@ Partial Public Class DsTestOne
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As DsTestOne = CType(MyBase.Clone, DsTestOne)
+        Dim cln As dsRptData = CType(MyBase.Clone, dsRptData)
         cln.InitVars()
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -199,9 +199,9 @@ Partial Public Class DsTestOne
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
     Private Sub InitClass()
-        Me.DataSetName = "DsTestOne"
+        Me.DataSetName = "dsRptData"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/DsTestOne.xsd"
+        Me.Namespace = "http://tempuri.org/dsRptData.xsd"
         Me.EnforceConstraints = True
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableData1 = New Data1DataTable()
@@ -225,7 +225,7 @@ Partial Public Class DsTestOne
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As DsTestOne = New DsTestOne()
+        Dim ds As dsRptData = New dsRptData()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -395,7 +395,7 @@ Partial Public Class DsTestOne
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Overloads Function AddData1Row(ByVal KodeItem As String, ByVal NamaItem As String, ByVal Qty As Integer, ByVal Hrg As Double) As Data1Row
+        Public Overloads Function AddData1Row(ByVal KodeItem As String, ByVal NamaItem As String, ByVal Qty As String, ByVal Hrg As String) As Data1Row
             Dim rowData1Row As Data1Row = CType(Me.NewRow, Data1Row)
             Dim columnValuesArray() As Object = New Object() {KodeItem, NamaItem, Qty, Hrg}
             rowData1Row.ItemArray = columnValuesArray
@@ -433,9 +433,9 @@ Partial Public Class DsTestOne
             MyBase.Columns.Add(Me.columnKodeItem)
             Me.columnNamaItem = New Global.System.Data.DataColumn("NamaItem", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNamaItem)
-            Me.columnQty = New Global.System.Data.DataColumn("Qty", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnQty = New Global.System.Data.DataColumn("Qty", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnQty)
-            Me.columnHrg = New Global.System.Data.DataColumn("Hrg", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnHrg = New Global.System.Data.DataColumn("Hrg", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHrg)
         End Sub
 
@@ -504,7 +504,7 @@ Partial Public Class DsTestOne
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As DsTestOne = New DsTestOne()
+            Dim ds As dsRptData = New dsRptData()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -613,30 +613,30 @@ Partial Public Class DsTestOne
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Property Qty() As Integer
+        Public Property Qty() As String
             Get
                 Try
-                    Return CType(Me(Me.tableData1.QtyColumn), Integer)
+                    Return CType(Me(Me.tableData1.QtyColumn), String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Qty' in table 'Data1' is DBNull.", e)
                 End Try
             End Get
-            Set(value As Integer)
+            Set(value As String)
                 Me(Me.tableData1.QtyColumn) = value
             End Set
         End Property
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Property Hrg() As Double
+        Public Property Hrg() As String
             Get
                 Try
-                    Return CType(Me(Me.tableData1.HrgColumn), Double)
+                    Return CType(Me(Me.tableData1.HrgColumn), String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Hrg' in table 'Data1' is DBNull.", e)
                 End Try
             End Get
-            Set(value As Double)
+            Set(value As String)
                 Me(Me.tableData1.HrgColumn) = value
             End Set
         End Property
