@@ -77,6 +77,11 @@ Public Class frmDOBrowse
             End If
 
         Else
+            Dim Nprint As Integer = ViewH.Rows(ViewH.CurrentRow.Index).Cells("nPrint").Value
+            If Nprint > 0 Then
+                MessageBox.Show("Sudah Pernah di cetak, tidak bisa di Tambah")
+                Return
+            End If
             'call detail form
             Dim Detail As New FrmSODetailUpdate(_RowIDH)
             Dim Dr As DialogResult = Detail.ShowDialog()
@@ -129,7 +134,14 @@ Public Class frmDOBrowse
     End Sub
 
     Private Sub CmdEdit_Click(sender As Object, e As EventArgs) Handles CmdEdit.Click
+        Dim Nprint As Integer = ViewH.Rows(ViewH.CurrentRow.Index).Cells("nPrint").Value
+        If Nprint > 0 Then
+            MessageBox.Show("Sudah Pernah di cetak, tidak bisa di edit")
+            Return
+        End If
+
         If _Selected = "Header" Then
+
             'call header form
             Dim Header As New FrmSOHeaderUpdate(_RowIDH)
             Dim Dr As DialogResult = Header.ShowDialog()
@@ -152,6 +164,11 @@ Public Class frmDOBrowse
     End Sub
 
     Private Sub CmdDel_Click(sender As Object, e As EventArgs) Handles CmdDel.Click
+        Dim Nprint As Integer = ViewH.Rows(ViewH.CurrentRow.Index).Cells("nPrint").Value
+        If Nprint > 0 Then
+            MessageBox.Show("Sudah Pernah di cetak, tidak bisa di Hapus")
+            Return
+        End If
         If MessageBox.Show("Hapus Data Baris ini ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes And _Selected <> "Header" Then
             Dim SQL As String
             Try
